@@ -4,6 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 COPY requirements.txt /tmp/
+COPY run.py /
 
 RUN pip install \
     --no-cache-dir \

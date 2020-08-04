@@ -1,6 +1,6 @@
 {
     "name": "Share Listing",
-    "version": "0.6",
+    "version": "0.9",
     "slug": "share_listing",
     "description": "Share Listing Description",
     "arch": ["armhf", "armv7", "aarch64"],
