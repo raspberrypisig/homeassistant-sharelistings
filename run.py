@@ -1,10 +1,14 @@
 import os
+import json
 from pathlib import Path
 
 def listFiles(basedir, requestedPath, glob):
-    allFiles = Path(basedir).joinpath(requestedPath).glob(glob)
-    for f in allFiles:
-      print(str(f))
+    requestedFiles = Path(basedir).joinpath(requestedPath).glob(glob)
+    requestedFiles = list(map(str, list(requestedFiles)))
+    resultJson = json.dumps(requestedFiles)
+    print(requestedFiles)
+    print(resultJson)
+    return resultJson
 
 
 if __name__ == "__main__":
