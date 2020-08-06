@@ -38,7 +38,7 @@ The example layout would return ["/Music/Snoop Dogg", "/Music/Roxette"]
 
 **http://<HOME_ASSISTANT_IP>:8000/files/Music/Roxette**
 
-The example layout would return ["/local/Music/1980hits.txt", "/local/Music/boo.wav"]
+The example layout would return ["/local/Music/Roxette/1980hits.txt", "/local/Music/Roxette/boo.wav"]
 
 ### Filter files under a directory
 
