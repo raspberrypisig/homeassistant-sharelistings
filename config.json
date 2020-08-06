@@ -1,9 +1,9 @@
 {
-    "name": "Share Explorer",
-    "version": "0.1",
-    "slug": "share_explorer",
+    "name": "WWW Explorer",
+    "version": "0.2",
+    "slug": "www_explorer",
     "url": "https://github.com/raspberrypisig/homeassistant-sharelistings",
-    "description": "Files and Folder listing under the /share directory accessible from HTTP",
+    "description": "Explore files and folders listing under /config/www directory from HTTP requests.",
     "arch": ["armhf", "armv7", "aarch64"],
     "startup": "application",
     "boot": "auto",
