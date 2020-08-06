@@ -48,7 +48,7 @@ The example layout would return ["/local/Music/Snoop Dogg/1.mp3", "/local/Music/
 
 ### Experimenting with glob
 
-**http://HOME_ASSISTANT_IP>:8000/files/Music/filter/**/*.wav**
+**http://HOME_ASSISTANT_IP>:8000/files/Music/filter/&ast;&ast;/*.wav**
 
 The example layout would return ["/local/Music/Roxette/boo.wav"]
 
