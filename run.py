@@ -2,7 +2,7 @@ from pathlib import Path
 from flask import Flask, jsonify
 
 app = Flask(__name__)
-BASEDIR = "/share"
+BASEDIR = "/config/www"
 HOST="0.0.0.0"
 PORT=8000
 
