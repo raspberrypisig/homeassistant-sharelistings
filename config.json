@@ -2,7 +2,7 @@
     "name": "Share Explorer",
     "version": "0.1",
     "slug": "share_explorer",
-    "url": "https://github.com/raspberrypisig/homeassistant-sharelistings/tree/master/README.md",
+    "url": "https://github.com/raspberrypisig/homeassistant-sharelistings",
     "description": "Files and Folder listing under the /share directory accessible from HTTP",
     "arch": ["armhf", "armv7", "aarch64"],
     "startup": "application",

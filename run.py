@@ -3,18 +3,32 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 BASEDIR = "/config/www"
+LOCAL="/local"
 HOST="0.0.0.0"
 PORT=8000
 
+def modifyURL(elem):
+    return str(elem).replace(BASEDIR, LOCAL)
+
+def modifyURLDir(elem):
+    return str(elem).replace(BASEDIR, '')
+
 def listFiles(basedir, requestedPath, glob="*"):
-    files = Path(basedir).joinpath(requestedPath).glob(glob)
-    files = list(map(str, list(files)))
-    return jsonify(files)
+    p = Path(basedir).joinpath(requestedPath)
+    if p.is_dir():
+        files = p.glob(glob)
+        files = list(map(modifyURL, list(files)))
+        return jsonify(files)
+    else:
+        return jsonify([])
 
 def listDir(basedir, requestedPath):
   p = Path(basedir).joinpath(requestedPath)
-  directories =  [str(x) for x in p.iterdir() if x.is_dir()]
-  return jsonify(directories)
+  if p.is_dir():
+      directories =  [modifyURLDir(x) for x in p.iterdir() if x.is_dir()]
+      return jsonify(directories)
+  else:
+      return jsonify([])
 
 @app.route('/files/<path:req>/filter/<path:glob>')
 def listSelectedFilesInPath(req, glob):

@@ -1,4 +1,4 @@
-# Share Explorer Home Assistant Addon
+# WWW Folder Explorer Home Assistant Addon
 
 This addon allows you to explore the files and folders in /config/www using HTTP. 
 
@@ -20,11 +20,11 @@ The result is a JSON document of an array of strings(either full paths of files 
 
 # Syntax
 
-### Directories under /share directory
+### Directories under /config/www directory
 
 ** http://<HOME_ASSISTANT_IP>:8000/ **
 
-The example layout would return ["Music"]
+The example layout would return ["/Music"]
 
 
 ### Directories under a subdiretory
@@ -32,25 +32,25 @@ The example layout would return ["Music"]
 
 ** http://<HOME_ASSISTANT_IP>:8000/directories/Music **
 
-The example layout would return ["Music/Snoop Dogg", "/Music/Roxette"]
+The example layout would return ["/Music/Snoop Dogg", "/Music/Roxette"]
 
 ### Files under a subdirectory
 
 ** http://<HOME_ASSISTANT_IP>:8000/files/Music/Roxette **
 
-The example layout would return ["Music/1980hits.txt", "Music/boo.wav"]
+The example layout would return ["/local/Music/1980hits.txt", "/local/Music/boo.wav"]
 
 ### Filter files under a directory
 
 ** http://HOME_ASSISTANT_IP>:8000/files/Music/Snoop Dogg/filter/*.mp3 **
 
-The example layout would return ["Music/Snoop Dogg/1.mp3", "Music/Snoop Dogg/2.mp3", "Music/Snoop Dogg/3.mp3"]
+The example layout would return ["/local/Music/Snoop Dogg/1.mp3", "/local/Music/Snoop Dogg/2.mp3", "/local/Music/Snoop Dogg/3.mp3"]
 
 ### Experimenting with glob
 
 ** http://HOME_ASSISTANT_IP>:8000/files/Music/filter/**/*.wav **
 
-The example layout would return ["Music/Roxette/boo.wav"]
+The example layout would return ["/local/Music/Roxette/boo.wav"]
 
 
 
