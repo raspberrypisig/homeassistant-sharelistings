@@ -1,6 +1,6 @@
 # WWW Folder Explorer Home Assistant Addon
 
-This addon allows you to explore the files and folders in /config/www using HTTP. 
+This addon allows you to explore the files and folders in /config/www using HTTP requests. 
 
 The result is a JSON document of an array of strings(either full paths of files or folders).
 

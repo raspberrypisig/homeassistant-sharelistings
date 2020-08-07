@@ -11,7 +11,7 @@ def modifyURL(elem):
     return str(elem).replace(BASEDIR, LOCAL)
 
 def modifyURLDir(elem):
-    return str(elem).replace(BASEDIR, '')
+    return elem.name
 
 def listFiles(basedir, requestedPath, glob="*"):
     p = Path(basedir).joinpath(requestedPath)
